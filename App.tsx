@@ -1,20 +1,11 @@
-import { StyleSheet, View } from "react-native";
+import { NativeBaseProvider } from 'native-base';
 
-import HelloWorld from "./components/HelloWorld";
+import StackNavigation from './StackNavigation';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <HelloWorld />
-    </View>
+    <NativeBaseProvider>
+      <StackNavigation />
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
